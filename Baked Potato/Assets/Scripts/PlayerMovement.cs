@@ -25,19 +25,19 @@ public class PlayerMovement : MonoBehaviour {
     void wasdMovement() {
         if (Time.time - lastMove > moveDelay) {
             if (Input.GetKey("w")) {
-                nextPosition += new Vector3(-1, 0, -1);
+                nextPosition += new Vector3(0, 0, 1);
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
             if (Input.GetKey("a")) {
-                nextPosition += new Vector3(1, 0, -1);
+                nextPosition += new Vector3(-1, 0, 0);
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
             if (Input.GetKey("s")) {
-                nextPosition += new Vector3(1, 0, 1);
+                nextPosition += new Vector3(0, 0, -1);
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
             if (Input.GetKey("d")) {
-                nextPosition += new Vector3(-1, 0, 1);
+                nextPosition += new Vector3(1, 0, 0);
                 transform.eulerAngles = new Vector3(0, 0, 0);
             }
             lastMove = Time.time;
